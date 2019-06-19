@@ -22,9 +22,25 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'ملاحظاتي',
+      debugShowCheckedModeBanner: false,
       theme: theme,
       home: MyHomePage(title: 'Home', changeTheme: setTheme),
+      builder: (BuildContext context, Widget child) {
+      return new Directionality(
+        textDirection: TextDirection.rtl,
+        child: new Builder(
+          builder: (BuildContext context) {
+            return new MediaQuery(
+              data: MediaQuery.of(context).copyWith(
+                textScaleFactor: 1.0,
+              ),
+              child: child,
+            );
+          },
+        ),
+      );
+    },
     );
   }
 
@@ -42,10 +58,10 @@ class _MyAppState extends State<MyApp> {
 
   void updateThemeFromSharedPref() async {
     String themeText = await getThemeFromSharedPref();
-    if (themeText == 'light') {
-      setTheme(Brightness.light);
-    } else {
+    if (themeText == 'dark') {
       setTheme(Brightness.dark);
+    } else {
+      setTheme(Brightness.light);
     }
   }
 }

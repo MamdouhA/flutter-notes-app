@@ -53,7 +53,7 @@ class NoteCardComponent extends StatelessWidget {
                   Text(
                     '${noteData.title.trim().length <= 20 ? noteData.title.trim() : noteData.title.trim().substring(0, 20) + '...'}',
                     style: TextStyle(
-                        fontFamily: 'ZillaSlab',
+                        fontFamily: 'Tajawal',
                         fontSize: 20,
                         fontWeight: noteData.isImportant
                             ? FontWeight.w800
@@ -64,11 +64,11 @@ class NoteCardComponent extends StatelessWidget {
                     child: Text(
                       '${noteData.content.trim().split('\n').first.length <= 30 ? noteData.content.trim().split('\n').first : noteData.content.trim().split('\n').first.substring(0, 30) + '...'}',
                       style:
-                          TextStyle(fontSize: 14, color: Colors.grey.shade400),
+                          TextStyle(fontSize: 14,fontFamily: 'Tajawal', color: Colors.grey.shade400),
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.only(top: 14),
+                    margin: EdgeInsets.only(top: 12),
                     alignment: Alignment.centerRight,
                     child: Row(
                       children: <Widget>[
@@ -147,11 +147,11 @@ class AddNoteCardComponent extends StatelessWidget {
                       Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Add new note',
+                            'أضف ملاحظة جديدة',
                             style: TextStyle(
-                                fontFamily: 'ZillaSlab',
+                                fontFamily: 'Tajawal',
                                 color: Theme.of(context).primaryColor,
-                                fontSize: 20),
+                                fontSize: 18),
                           ))
                     ],
                   ),

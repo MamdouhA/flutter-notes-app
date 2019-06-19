@@ -1,15 +1,15 @@
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
-import 'dart:async';
+// import 'package:flutter/gestures.dart';
+// import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/painting.dart' as prefix0;
 import 'package:flutter/widgets.dart';
 import 'package:notes/data/models.dart';
 import 'package:notes/services/database.dart';
-import 'package:outline_material_icons/outline_material_icons.dart';
+// import 'package:outline_material_icons/outline_material_icons.dart';
 
 class EditNotePage extends StatefulWidget {
   Function() triggerRefetch;
@@ -75,15 +75,15 @@ class _EditNotePageState extends State<EditNotePage> {
                 },
                 textInputAction: TextInputAction.next,
                 style: TextStyle(
-                    fontFamily: 'ZillaSlab',
+                    fontFamily: 'Tajawal',
                     fontSize: 32,
                     fontWeight: FontWeight.w700),
                 decoration: InputDecoration.collapsed(
-                  hintText: 'Enter a title',
+                  hintText: 'عنوان الملاحظة',
                   hintStyle: TextStyle(
                       color: Colors.grey.shade400,
-                      fontSize: 32,
-                      fontFamily: 'ZillaSlab',
+                      fontSize: 28,
+                      fontFamily: 'Tajawal',
                       fontWeight: FontWeight.w700),
                   border: InputBorder.none,
                 ),
@@ -99,10 +99,11 @@ class _EditNotePageState extends State<EditNotePage> {
                 onChanged: (value) {
                   markContentAsDirty(value);
                 },
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 18, fontFamily: 'Tajawal', fontWeight: FontWeight.w500),
                 decoration: InputDecoration.collapsed(
-                  hintText: 'Start typing...',
+                  hintText: 'إبدا الكتابة...',
                   hintStyle: TextStyle(
+                    fontFamily: 'Tajawal',
                       color: Colors.grey.shade400,
                       fontSize: 18,
                       fontWeight: FontWeight.w500),
@@ -127,7 +128,7 @@ class _EditNotePageState extends State<EditNotePage> {
                       ),
                       Spacer(),
                       IconButton(
-                        tooltip: 'Mark note as important',
+                        tooltip: 'صنف الملاحظة "مهمة"',
                         icon: Icon(currentNote.isImportant
                             ? Icons.flag
                             : Icons.outlined_flag),
@@ -143,7 +144,7 @@ class _EditNotePageState extends State<EditNotePage> {
                         },
                       ),
                       AnimatedContainer(
-                        margin: EdgeInsets.only(left: 10),
+                        margin: EdgeInsets.only(right: 10),
                         duration: Duration(milliseconds: 200),
                         width: isDirty ? 100 : 0,
                         height: 42,
@@ -153,11 +154,14 @@ class _EditNotePageState extends State<EditNotePage> {
                           textColor: Colors.white,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(100),
-                                  bottomLeft: Radius.circular(100))),
+                                  // topLeft: Radius.circular(100),
+                                  topRight: Radius.circular(100),
+                                  bottomRight: Radius.circular(100),
+                                  // bottomLeft: Radius.circular(100))
+                                  )),
                           icon: Icon(Icons.done),
                           label: Text(
-                            'SAVE',
+                            'حفظ',
                             style: TextStyle(letterSpacing: 1),
                           ),
                           onPressed: handleSave,
@@ -224,11 +228,11 @@ class _EditNotePageState extends State<EditNotePage> {
             return AlertDialog(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8)),
-              title: Text('Delete Note'),
-              content: Text('This note will be deleted permanently'),
+              title: Text('حذف الملاحظة'),
+              content: Text('سيتم حذف هذه الملاحظة بشكل دائم'),
               actions: <Widget>[
                 FlatButton(
-                  child: Text('DELETE',
+                  child: Text('حذف',
                       style: prefix0.TextStyle(
                           color: Colors.red.shade300,
                           fontWeight: FontWeight.w500,
@@ -241,7 +245,7 @@ class _EditNotePageState extends State<EditNotePage> {
                   },
                 ),
                 FlatButton(
-                  child: Text('CANCEL',
+                  child: Text('إلغاء',
                       style: TextStyle(
                           color: Theme.of(context).primaryColor,
                           fontWeight: FontWeight.w500,

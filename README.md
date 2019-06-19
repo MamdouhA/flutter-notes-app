@@ -1,6 +1,7 @@
-# Draft - Notes app
+# Draft Arabic ver. - Notes app
 
 An elegant notes taking app written in Flutter that uses sqflite for storage.
+It's orignally created by @roshanrahman 
 
 ## Features
 1. *Animated UI*: A beautiful, minimalist user interface with subtle animations.
@@ -17,16 +18,17 @@ An elegant notes taking app written in Flutter that uses sqflite for storage.
 - url_launcher: ^5.0.3
 - shared_preferences: ^0.5.3+1
 - share: ^0.6.1+1
+- flutter_localizations: 
+    sdk: flutter
 
-## Run the project
-- With Flutter installed, clone project and run `flutter run --release` in that directory, 
-or
-- Download the built APK from [here](https://github.com/roshanrahman/flutter-notes-app/raw/master/github_assets/draft.apk)
+## dev_dependencies:
+- intl_translation: ^0.17.1
+
+
 
 ## Screenshots
 <img src="github_assets/edit.gif" height="800">
 <img src="github_assets/dark.gif" height="800">
 
-Feedback is welcome! Contact me for any info.
 
 

@@ -45,7 +45,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 child: Container(
                     padding:
                         const EdgeInsets.only(top: 24, left: 24, right: 24),
-                    child: Icon(OMIcons.arrowBack)),
+                    child: Icon(OMIcons.arrowForward)),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 16, top: 36, right: 24),
@@ -54,8 +54,8 @@ class _SettingsPageState extends State<SettingsPage> {
               buildCardWidget(Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text('App Theme',
-                      style: TextStyle(fontFamily: 'ZillaSlab', fontSize: 24)),
+                  Text('نمط التطبيق',
+                      style: TextStyle(fontFamily: 'Tajawal', fontSize: 24)),
                   Container(
                     height: 20,
                   ),
@@ -67,8 +67,9 @@ class _SettingsPageState extends State<SettingsPage> {
                         onChanged: handleThemeSelection,
                       ),
                       Text(
-                        'Light theme',
-                        style: TextStyle(fontSize: 18),
+                        'إفتراضي',
+                        style: TextStyle(fontSize: 18,
+                        fontFamily: 'Tajawal'),
                       )
                     ],
                   ),
@@ -80,8 +81,9 @@ class _SettingsPageState extends State<SettingsPage> {
                         onChanged: handleThemeSelection,
                       ),
                       Text(
-                        'Dark theme',
-                        style: TextStyle(fontSize: 18),
+                        'غامق',
+                        style: TextStyle(fontSize: 18,
+                        fontFamily: 'Tajawal'),
                       )
                     ],
                   ),
@@ -90,17 +92,18 @@ class _SettingsPageState extends State<SettingsPage> {
               buildCardWidget(Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Text('About app',
+                  Text('عن التطبيق',
                       style: TextStyle(
-                          fontFamily: 'ZillaSlab',
+                          fontFamily: 'Tajawal',
                           fontSize: 24,
                           color: Theme.of(context).primaryColor)),
                   Container(
                     height: 40,
                   ),
                   Center(
-                    child: Text('Developed by'.toUpperCase(),
+                    child: Text('مصدر مفتوح تم تطويره من قبل',
                         style: TextStyle(
+                          fontFamily: 'Tajawal',
                             color: Colors.grey.shade600,
                             fontWeight: FontWeight.w500,
                             letterSpacing: 1)),
@@ -130,34 +133,68 @@ class _SettingsPageState extends State<SettingsPage> {
                   Container(
                     height: 30,
                   ),
+
                   Center(
-                    child: Text('Made With'.toUpperCase(),
+                    child: Text('وتعديله وتعريبه من قبل',
                         style: TextStyle(
+                          fontFamily: 'Tajawal',
                             color: Colors.grey.shade600,
                             fontWeight: FontWeight.w500,
                             letterSpacing: 1)),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Center(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          FlutterLogo(
-                            size: 40,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              'Flutter',
-                              style: TextStyle(
-                                  fontFamily: 'ZillaSlab', fontSize: 24),
-                            ),
-                          )
-                        ],
-                      ),
+                  Center(
+                      child: Padding(
+                    padding: const EdgeInsets.only(top: 8.0, bottom: 4.0),
+                    child: Text(
+                      'Mamdouh',
+                      style: TextStyle(fontFamily: 'ZillaSlab', fontSize: 24),
+                    ),
+                  )),
+                  Container(
+                    alignment: Alignment.center,
+                    child: OutlineButton.icon(
+                      icon: Icon(OMIcons.link),
+                      label: Text('GITHUB',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              letterSpacing: 1,
+                              color: Colors.grey.shade500)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16)),
+                      onPressed: openGitHub1,
                     ),
                   ),
+
+
+
+                  // Center(
+                  //   child: Text('Made With'.toUpperCase(),
+                  //       style: TextStyle(
+                  //           color: Colors.grey.shade600,
+                  //           fontWeight: FontWeight.w500,
+                  //           letterSpacing: 1)),
+                  // ),
+                  // Padding(
+                  //   padding: const EdgeInsets.all(8.0),
+                  //   child: Center(
+                  //     child: Row(
+                  //       mainAxisAlignment: MainAxisAlignment.center,
+                  //       children: <Widget>[
+                  //         FlutterLogo(
+                  //           size: 40,
+                  //         ),
+                  //         Padding(
+                  //           padding: const EdgeInsets.all(8.0),
+                  //           child: Text(
+                  //             'Flutter',
+                  //             style: TextStyle(
+                  //                 fontFamily: 'ZillaSlab', fontSize: 24),
+                  //           ),
+                  //         )
+                  //       ],
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ))
             ],
@@ -188,9 +225,9 @@ class _SettingsPageState extends State<SettingsPage> {
     return Container(
       margin: EdgeInsets.only(top: 8, bottom: 16, left: 8),
       child: Text(
-        'Settings',
+        'الإعدادات',
         style: TextStyle(
-            fontFamily: 'ZillaSlab',
+            fontFamily: 'Tajawal',
             fontWeight: FontWeight.w700,
             fontSize: 36,
             color: Theme.of(context).primaryColor),
@@ -212,5 +249,8 @@ class _SettingsPageState extends State<SettingsPage> {
 
   void openGitHub() {
     launch('https://www.github.com/roshanrahman');
+  }
+  void openGitHub1() {
+    launch('https://www.github.com/MamdouhA');
   }
 }

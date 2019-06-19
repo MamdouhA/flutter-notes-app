@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () {
           gotoEditNote();
         },
-        label: Text('Add note'.toUpperCase()),
+        label: Text('أضف ملاحظة'.toUpperCase()),
         icon: Icon(Icons.add),
       ),
       body: GestureDetector(
@@ -144,8 +144,8 @@ class _MyHomePageState extends State<MyHomePage> {
           Expanded(
             child: Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.only(left: 8),
-              padding: EdgeInsets.only(left: 16),
+              margin: EdgeInsets.only(right: 8),
+              padding: EdgeInsets.only(right: 16),
               height: 50,
               decoration: BoxDecoration(
                   border: Border.all(color: Colors.grey.shade300),
@@ -167,7 +167,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
                       textInputAction: TextInputAction.search,
                       decoration: InputDecoration.collapsed(
-                        hintText: 'Search',
+                        hintText: 'بحث',
                         hintStyle: TextStyle(
                             color: Colors.grey.shade300,
                             fontSize: 18,
@@ -199,11 +199,11 @@ class _MyHomePageState extends State<MyHomePage> {
           margin: EdgeInsets.only(top: 8, bottom: 32, left: 10),
           width: headerShouldHide ? 0 : 200,
           child: Text(
-            'Your Notes',
+            'ملاحظاتي..',
             style: TextStyle(
-                fontFamily: 'ZillaSlab',
+                fontFamily: 'Tajawal',
                 fontWeight: FontWeight.w700,
-                fontSize: 36,
+                fontSize: 32,
                 color: Theme.of(context).primaryColor),
             overflow: TextOverflow.clip,
             softWrap: false,
@@ -223,9 +223,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return AnimatedCrossFade(
       duration: Duration(milliseconds: 200),
       firstChild: Padding(
-        padding: const EdgeInsets.only(top: 8),
+        padding: const EdgeInsets.only(top: 8, bottom: 3),
         child: Text(
-          'Only showing notes marked important'.toUpperCase(),
+          'يتم عرض الملاحظات المهمة فقط',
           style: TextStyle(
               fontSize: 12, color: Colors.blue, fontWeight: FontWeight.w500),
         ),

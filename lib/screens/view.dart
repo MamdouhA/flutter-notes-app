@@ -61,7 +61,7 @@ class _ViewNotePageState extends State<ViewNotePage> {
                 child: Text(
                   widget.currentNote.title,
                   style: TextStyle(
-                    fontFamily: 'ZillaSlab',
+                    fontFamily: 'Tajawal',
                     fontWeight: FontWeight.w700,
                     fontSize: 36,
                   ),
@@ -74,10 +74,10 @@ class _ViewNotePageState extends State<ViewNotePage> {
               duration: Duration(milliseconds: 500),
               opacity: headerShouldShow ? 1 : 0,
               child: Padding(
-                padding: const EdgeInsets.only(left: 24),
+                padding: const EdgeInsets.only(right: 24),
                 child: Text(
-                  DateFormat.yMd().add_jm().format(widget.currentNote.date),
-                  style: TextStyle(
+                  DateFormat.yMd().add_jm().format(widget.currentNote.date), 
+                  style: TextStyle( 
                       fontWeight: FontWeight.w500, color: Colors.grey.shade500),
                 ),
               ),
@@ -87,7 +87,7 @@ class _ViewNotePageState extends State<ViewNotePage> {
                   left: 24.0, top: 36, bottom: 24, right: 24),
               child: Text(
                 widget.currentNote.content,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 18,fontFamily: 'Tajawal', fontWeight: FontWeight.w500),
               ),
             )
           ],
@@ -174,11 +174,11 @@ class _ViewNotePageState extends State<ViewNotePage> {
           return AlertDialog(
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-            title: Text('Delete Note'),
-            content: Text('This note will be deleted permanently'),
+            title: Text('حذف الملاحظة'),
+            content: Text('سيتم حذف هذه الملاحظة بشكل دائم'),
             actions: <Widget>[
               FlatButton(
-                child: Text('DELETE',
+                child: Text('حذف',
                     style: TextStyle(
                         color: Colors.red.shade300,
                         fontWeight: FontWeight.w500,
@@ -192,7 +192,7 @@ class _ViewNotePageState extends State<ViewNotePage> {
                 },
               ),
               FlatButton(
-                child: Text('CANCEL',
+                child: Text('إلغاء',
                     style: TextStyle(
                         color: Theme.of(context).primaryColor,
                         fontWeight: FontWeight.w500,
