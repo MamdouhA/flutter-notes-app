@@ -37,7 +37,12 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   intl_translation: ^0.17.1
+  flutter_launcher_icons: "^0.7.2"
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/mynotesapp.png"
 
 
 # For information on the generic Dart part of this file, see the
@@ -68,13 +73,13 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: ZillaSlab
-       fonts:
-         - asset: fonts/ZillaSlab-Regular.ttf
-         - asset: fonts/ZillaSlab-Italic.ttf
-           style: italic
-         - asset: fonts/ZillaSlab-Bold.ttf
-           weight: 700
+    #  - family: ZillaSlab
+    #    fonts:
+    #      - asset: fonts/ZillaSlab-Regular.ttf
+    #      - asset: fonts/ZillaSlab-Italic.ttf
+    #        style: italic
+    #      - asset: fonts/ZillaSlab-Bold.ttf
+    #        weight: 700
      - family: Tajawal
        fonts:
          - asset: fonts/Tajawal-Regular.ttf
