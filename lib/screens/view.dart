@@ -63,7 +63,7 @@ class _ViewNotePageState extends State<ViewNotePage> {
                   style: TextStyle(
                     fontFamily: 'Tajawal',
                     fontWeight: FontWeight.w700,
-                    fontSize: 36,
+                    fontSize: 32,
                   ),
                   overflow: TextOverflow.visible,
                   softWrap: true,

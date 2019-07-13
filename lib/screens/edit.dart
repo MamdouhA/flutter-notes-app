@@ -61,6 +61,7 @@ class _EditNotePageState extends State<EditNotePage> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
+                autocorrect: false,
                 focusNode: titleFocus,
                 autofocus: true,
                 controller: titleController,
@@ -92,6 +93,7 @@ class _EditNotePageState extends State<EditNotePage> {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: TextField(
+                autocorrect: false,
                 focusNode: contentFocus,
                 controller: contentController,
                 keyboardType: TextInputType.multiline,

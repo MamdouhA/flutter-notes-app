@@ -51,7 +51,7 @@ class NoteCardComponent extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    '${noteData.title.trim().length <= 20 ? noteData.title.trim() : noteData.title.trim().substring(0, 20) + '...'}',
+                    '${noteData.title.trim().length <= 25 ? noteData.title.trim() : noteData.title.trim().substring(0, 25) + '...'}',
                     style: TextStyle(
                         fontFamily: 'Tajawal',
                         fontSize: 20,
@@ -62,7 +62,7 @@ class NoteCardComponent extends StatelessWidget {
                   Container(
                     margin: EdgeInsets.only(top: 8),
                     child: Text(
-                      '${noteData.content.trim().split('\n').first.length <= 30 ? noteData.content.trim().split('\n').first : noteData.content.trim().split('\n').first.substring(0, 30) + '...'}',
+                      '${noteData.content.trim().split('\n').first.length <= 40 ? noteData.content.trim().split('\n').first : noteData.content.trim().split('\n').first.substring(0, 40) + '...'}',
                       style:
                           TextStyle(fontSize: 14,fontFamily: 'Tajawal', color: Colors.grey.shade400),
                     ),
